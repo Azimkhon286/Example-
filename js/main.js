@@ -11,20 +11,19 @@ function init() {
 
 	buttonToggleItems[0].addEventListener(
 		'click', 
-		(event) => 
-			handleShowItemsButtonClick(listItemsContainer[0], event)
+		(event) => handleShowItemsButtonClick(listItemsContainer[0], event)
 	)
 }
 
 function handleShowItemsButtonClick(listItemsContainer, pointerEvent) {
 	const classForVisibleHiddenItems = 'list--all-hidden-visible'
 
-		if(pointerEvent.currentTarget.innerText === 'Показать') {
-			pointerEvent.currentTarget.innerText = 'Скрыть'
-			listItemsContainer.classList.add(classForVisibleHiddenItems)
-		}
-		else {
-			pointerEvent.currentTarget.innerText = 'Показать'
-			listItemsContainer.classList.remove(classForVisibleHiddenItems)
-		}
+	if(pointerEvent.currentTarget.innerText === 'Показать') {
+		pointerEvent.currentTarget.innerText = 'Скрыть'
+		listItemsContainer.classList.add(classForVisibleHiddenItems)
+	}
+	else {
+		pointerEvent.currentTarget.innerText = 'Показать'
+		listItemsContainer.classList.remove(classForVisibleHiddenItems)
+	}
 }
